@@ -1,0 +1,21 @@
+{
+  "name": "xxxxxx-aqa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-tests-headed": "npx playwright test --ui",
+    "run-tests-headless": "npx playwright test",
+    "run-tests-allure": "npx playwright test --reporter=line,allure-playwright",
+    "allure:report": "allure generate allure-results --clean -o allure-report && allure open",
+    "gitlab-ci-cleanup": "npx playwright install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.35.1",
+    "allure-commandline": "^2.23.0",
+    "allure-playwright": "^2.4.0",
+    "randomstring": "^1.3.0"
+  }
+}
